@@ -25,7 +25,7 @@ const nota1 = 3;
 const nota2 = 9;
 const nota3 = 9;
 const media = (nota1 + nota2 + nota3) /3;
-console.log('1) media semestre: '+ media)
+console.log('media semestre: '+ media)
 
 if (media < 5 ) {
 	console.log ('reprovado');
@@ -48,6 +48,12 @@ if (media < 5 ) {
 // - Entre 25 e 30,  Acima do Peso;
 // - Entre 30 e 40, Obeso;
 // - Acima de 40 Obesidade Grave;
+// IMC em adultos Condição :	
+// - Abaixo de 18.5, Abaixo do Peso ;
+// - Entre 18.5 e 25, Peso Normal;
+// - Entre 25 e 30,  Acima do Peso;
+// - Entre 30 e 40, Obeso;
+// - Acima de 40 Obesidade Grave;
 const peso = 150;
 const altura = 1.83;
 const imc = peso / Math.pow(altura,2);
@@ -63,4 +69,25 @@ if (imc < 18.5){
 	console.log ('Obeso');
 } else {
 	console.log ('Condição:Obesidade Grave')
+}
+//3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento.
+// Utilize os codigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o calculo adequado.
+
+// Condigo Condição de Pagamento:
+// 1- Á vista Debito, recebe 10% de desconto;
+// 2- Á vista no Dinheiro ou Pix, recebe 15% de desconto;
+// 3- Em duas vezes, preço normal de etiqueta sem juros; 
+// 4- Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+const produto = 'camiseta'
+const precoEtiqueta = 100;
+const formaDePagamento = 4;
+ console.log ('4)',produto,'R$',precoEtiqueta)
+ if (formaDePagamento === 1 ){
+ 	console.log ('no debito 10% de desconto:R$'+( precoEtiqueta - (precoEtiqueta*0.1)))
+ } else if(formaDePagamento === 2 ){
+	console.log ('no dinheiro ou pix 15% de desconto:R$'+( precoEtiqueta - (precoEtiqueta*0.15)))
+} else if (formaDePagamento === 3 ){
+	console.log ('Em duas vezes:2x R$'+( precoEtiqueta /2))
+} else if (formaDePagamento === 4 ) {
+	console.log('Acima de 2 vezes 10% de juros:R$'+( precoEtiqueta + (precoEtiqueta*0.1)))
 }
